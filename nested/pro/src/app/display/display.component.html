@@ -1,0 +1,51 @@
+<app-nab></app-nab>
+<body>
+
+<br>
+<h1>DATA</h1>
+<table>
+    <thead>
+        <tr class="row">
+            <td class="col"><b>FIRST NAME</b></td>
+            <td class="col"><b>GENDER</b></td>
+            <td class="col"><b>DOB</b></td>
+            <td class="col"><b>Your age</b></td>
+            <td class="col"><b>EMAIL</b></td>
+            <td class="col"><b>CONT. No.</b></td>
+            <td class="col"><b>houseNo</b></td>
+            <td class="col"><b>street</b></td>
+            <td class="col"><b>CITY</b></td>
+            <td class="col"><b>state</b></td>
+            <td class="col"><b>collage</b></td>
+            <td class="col"><b>cgpa</b></td>
+            <td class="col"><b>percentage</b></td>
+            <td class="col"><b>branch</b></td>
+            <td class="col"><b>job_role</b></td>
+            <td class="col"><b>interests</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="row">
+            <td class="col">{{data ['personalDetails']['name']|uppercase}}</td>
+            <td class="col">{{data ['personalDetails']['gender']|uppercase}}</td>
+            <td class="col">{{data ['personalDetails']['dob']| date}}</td>
+            <td class="col">{{data ['personalDetails']['dob'] | age}}</td>
+            <td class="col">{{data ['personalDetails']['email'] }}</td>
+            <td class="col">{{data ['personalDetails']['phone']}}</td>
+            <td class="col">{{data ['addressForm']['houseNo']|uppercase}}</td>
+            <td class="col">{{data ['addressForm']['street']|uppercase}}</td>
+            <td class="col">{{data ['addressForm']['city']|uppercase}}</td>
+            <td class="col">{{data ['addressForm']['state']}}</td>
+            <td class="col">{{data ['personal_info']['collage']}}</td>
+            <td class="col">{{data ['personal_info']['cgpa']}}</td>
+            <td class="col">{{data ['personal_info']['cgpa']| convert}}</td>
+            <td class="col">{{data ['personal_info']['branch']|uppercase}}</td>
+            <td class="col">{{data ['personal_info']['job_role']}}</td>
+            <td class="col">{{data ['personal_info']['Interests']}}</td>
+        </tr>
+    </tbody>
+
+</table>
+<br>
+
+</body>

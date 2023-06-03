@@ -1,0 +1,100 @@
+<!-- <body>
+  <div class="box">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-signin">
+      <h2 class="form-signin-heading">Please login</h2>
+
+      <div class="user-box">
+        <label>Email</label>
+        <input type="text" formControlName="email" placeholder="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+        <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+          <div *ngIf="f['email'].errors['required']">Email is required</div>
+          <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+        </div>
+      </div>
+
+      <div class="user-box">
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"/>
+        <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+          <div *ngIf="f['password'].errors['required']">Password is required</div>
+          <div *ngIf="f['password'].errors['minlength']">
+            Password must be at least 6 characters
+          </div>
+          <div *ngIf="f['password'].errors['maxlength']">
+            Username must not exceed 40 characters
+          </div>
+        </div>
+      </div>
+
+      <div class="user-box">
+        <label>Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" placeholder="confirm password" class="bar" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"/>
+        <div
+          *ngIf="submitted && f['confirmPassword'].errors"
+          class="invalid-feedback">
+          <div *ngIf="f['confirmPassword'].errors['required']">
+            Confirm Password is required
+          </div>
+          <div *ngIf="f['confirmPassword'].errors['matching']">
+            Confirm Password does not match
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button   type="submit" routerLink="/nestedform" routerLinkActive="active" class="btn btn-primary" [disabled]="!form.valid">Register</button>
+      </div>
+    </form>
+  </div>
+
+</body> -->
+
+
+
+<div class="form-structor">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="signup">
+
+      <h2 class="form-title" id="signup">Login</h2>
+      <div class="form-holder">
+        <div>
+          <div>
+            <input type="text" formControlName="email" placeholder="email" class="input" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"/>
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+        </div>
+
+        <div>
+          <div>
+            <input type="password" formControlName="password" placeholder="password" class="input" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"/>
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div *ngIf="f['password'].errors['required']">Password is required</div>
+              <div *ngIf="f['password'].errors['minlength']">
+                Password must be at least 6 characters
+              </div>
+              <div *ngIf="f['password'].errors['maxlength']">
+                Username must not exceed 40 characters
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <input type="password" formControlName="confirmPassword" placeholder="confirm password" class="input" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }"/>
+          <div
+            *ngIf="submitted && f['confirmPassword'].errors"
+            class="invalid-feedback">
+            <div *ngIf="f['confirmPassword'].errors['required']">
+              Confirm Password is required
+            </div>
+            <div *ngIf="f['confirmPassword'].errors['matching']">
+              Confirm Password does not match
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <button  type="submit" routerLink="/nestedform" routerLinkActive="active" class="submit-btn" [disabled]="!form.valid">Register</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,172 @@
+<app-nab></app-nab>
+<body background>
+  <div>
+    <form [formGroup]="personalForm" class="from">
+      <div formGroupName="personalDetails" class="form-group" class="box">
+        <label>Name:</label>
+        <input  class="form-styling" type="text" placeholder="name" formControlName="name" required>
+        <div *ngIf="personalForm.get('personalDetails.name')?.invalid && (personalForm.get('personalDetails.name')?.dirty || personalForm.get('personalDetails.name')?.touched)" class="alert">
+          First Name is required.
+          <div *ngIf="personalForm.get('personalDetails.name')?.errors?.['pattern']">Please enter a valid email address.</div>
+      </div>
+
+
+        <div class="gender">
+          <label for="gender">Gender</label>
+          <label>
+            <input type="radio" value="male" formControlName="gender"> Male
+          </label>
+          <label>
+            <input type="radio" value="female" formControlName="gender"> Female
+          </label>
+
+
+          <div>
+            <label class="l1">Date of Birth</label>
+          <input class="form-styling" type="date" class="in" placeholder="DOB"  formControlName="dob" min="1990-01-01">
+          </div>
+        </div>
+
+
+        <!-- <div>
+          <label>Age:</label>
+        <input  class="form-styling" type="number" placeholder="age" formControlName="age" required >
+        <div *ngIf="personalForm.get('personalDetails.age')?.invalid && (personalForm.get('personalDetails.age')?.dirty || personalForm.get('personalDetails.age')?.touched)" class="alert" >
+          <div *ngIf="personalForm.get('personalDetails.age')?.hasError('required')">age is required.</div>
+      </div> -->
+
+
+        <div>
+          <label>Email:</label>
+        <input  class="form-styling" type="email" placeholder="email" formControlName="email" required >
+        <div *ngIf="personalForm.get('personalDetails.email')?.invalid && (personalForm.get('personalDetails.email')?.dirty || personalForm.get('personalDetails.email')?.touched)" class="alert" >
+          <div *ngIf="personalForm.get('personalDetails.email')?.hasError('required')">Email is required.</div>
+      <div *ngIf="personalForm.get('personalDetails.email')?.errors?.['pattern']">Please enter a valid email address.</div>
+      </div>
+      </div>
+
+
+      <div>
+        <label>Phone Number:</label>
+        <input class="form-styling" type="number" placeholder="number" formControlName="phone" >
+        <div *ngIf="personalForm.get('personalDetails.phone')?.invalid && (personalForm.get('personalDetails.phone')?.dirty || personalForm.get('personalDetails.phone')?.touched)" class="alert">
+          <div *ngIf="personalForm.get('personalDetails.phone')?.hasError('required')">contact Number is required.</div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+      <div formGroupName="addressForm" class="form-group">
+        <div>
+          <label>House No:</label>
+        <input  class="form-styling" placeholder="house no" type="text" formControlName="houseNo">
+        </div>
+
+
+        <div>
+          <label>Street:</label>
+        <input  class="form-styling" type="text" formControlName="street">
+        </div>
+
+
+        <div>
+          <label>City:</label>
+        <input class="form-styling" type="text" formControlName="city">
+        </div>
+
+
+        <div>
+          <label>State:</label>
+        <select class="form-styling1"formControlName="state">
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+        </div>
+      </div>
+
+
+
+
+      <div formGroupName="personal_info" class="form-group">
+        <div>
+          <label>collage</label>
+        <input class="form-styling" type="text" formControlName="collage">
+        </div>
+        <div>
+          <label>cgpa</label>
+        <input class="form-styling" type="number" formControlName="cgpa">
+        </div>
+        <div>
+          <label>branch</label>
+        <input class="form-styling" type="text" formControlName="branch">
+        </div>
+        <div>
+          <label for="job" >Job Role:</label>
+          <select formControlName="job_role" class="form-styling" name="user_job" >
+            <optgroup  label="Web">
+                <option value="frontend_developer">Front-End Developer</option>
+                <option value="php_developer">PHP Developer</option>
+                <option value="python_developer">Python Developer</option>
+                <option value="rails_developer">Rails Developer</option>
+                <option value="web_designer">Web Designer</option>
+                <option value="wordpress_developer">Wordpress Developer</option>
+              </optgroup>
+              <optgroup  label="Mobile">
+                <option value="android_developer">Android Developer</option>
+                <option value="ios_developer">IOS Developer</option>
+                <option value="mobile_designer">Mobile Designer</option>
+              </optgroup>
+              <optgroup  label="Business">
+                <option value="business_owner">Business Owner</option>
+                <option value="freelancer">Freelancer</option>
+              </optgroup>
+            </select>
+        </div>
+        <div>
+          <label>Interests:</label>
+            <input formControlName="Interests" type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+            <input formControlName="Interests" type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+            <input formControlName="Interests" type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+            <input formControlName="Interests" type="checkbox" id="singing" value="interest_business" name="user_interest"><label class="light" for="business">singing</label>
+        </div>
+      </div>
+      <button class="btn" type="submit" (click)="store()">Submit</button>
+      <button class="btn" type="button" (click)="edit()">Edit</button>
+      <button class="btn" type="button" routerLink="/display" routerLinkActive="active">Display</button><br><br><br><br>
+    </form>
+  </div>
+</body>

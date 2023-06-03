@@ -1,0 +1,22 @@
+
+.footer {
+  width: 100%;
+  margin-left: -1%;
+  text-align: center;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(196, 196, 196);
+  color: white;
+  position: fixed;
+  bottom: 0px;
+
+
+
+
+
+}
+p{
+  filter:blur(0px) !important;
+  z-index: 100;
+
+}

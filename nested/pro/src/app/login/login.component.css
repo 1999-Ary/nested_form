@@ -1,0 +1,67 @@
+.form-structor {
+  text-align: center;
+  background-color: #d3d3d300;
+  width: 100%;
+  max-width: 600px;
+  height: 100vh;
+  margin:  auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 10px;
+
+}
+
+.form-structor .signup {
+  padding: 30px;
+}
+
+.form-structor .form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-structor .form-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-structor .input {
+  border: none;
+  background-color: #e8e8e8;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.form-structor .input:focus {
+  background-color: #fff;
+}
+
+.form-structor .submit-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-structor .submit-btn:hover {
+  background-color: #222;
+}
+
+.form-structor .is-invalid {
+  border: 2px solid red;
+}
+
+.form-structor .invalid-feedback {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
